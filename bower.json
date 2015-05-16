@@ -1,0 +1,20 @@
+{
+  "name": "hauthorn.me",
+  "version": "1",
+  "homepage": "http://hauthorn.me",
+  "authors": [
+    "Christoffer Hauthorn <chb@hauthorn-it.dk>"
+  ],
+  "description": "Portfolio site",
+  "main": "index.html",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap-material-design": "~0.3.0"
+  }
+}

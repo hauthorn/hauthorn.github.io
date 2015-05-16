@@ -3,8 +3,237 @@
 <head lang="da">
     <meta charset="UTF-8">
     <title>Hauthorn</title>
+    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/roboto.min.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material-fullpalette.min.css"/>
+    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/ripples.min.css"/>
+    <style>
+        body {
+            margin-bottom: 60px;
+        }
+
+        header {
+            padding-top: 2em;
+        }
+
+        .my-name img {
+            border-radius: 50%; /* Give it that ellipse shape for fun */
+            max-width: 200px !important;
+            margin-top: 0.5em;
+        }
+
+        .my-name h1 {
+            font-size: 21px;
+            margin-bottom: 0;
+        }
+        .my-name p {
+            font-size: inherit;
+        }
+
+        a,
+        a:hover,
+        a:focus,
+        .text-primary {
+            color: #03a9f4;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        .list-group .list-group-item .row-picture i,
+        .list-group .list-group-item .row-action-primary i {
+            background-color: #03A9F4;
+        }
+
+        .list-group {
+            padding-top: 1em;
+        }
+
+        #webapp-dialog.modal {
+            position: absolute;
+            padding-right: 0 !important;
+        }
+
+        #webapp-dialog.modal .modal-dialog {
+            width: 90%;
+        }
+    </style>
 </head>
 <body>
-<p>Hello, world!</p>
+
+<header class="header-panel shadow-z-1 well-material-light-blue">
+    <!-- I'm just here to frame the site and look pretty while doing so -->
+</header>
+<div class="container" style="padding-top: 2em">
+    <div class="row">
+        <div class="col-md-12">
+
+            <div class="jumbotron">
+                <div class="row">
+                    <div class="col-md-4 my-name">
+                        <div class="row">
+                            <div class="col-md-12">
+                                <img src="img/christoffer-hauthorn-boisen.jpg" alt="Christoffer Hauthorn" class="center-block img-responsive"/>
+                            </div>
+                            <div class="col-md-12 text-center">
+                                <h1>Christoffer Hauthorn Boisen</h1>
+                                <p>
+                                    <small>Stud. Bachelor i IT Produktudvikling & iværksætter</small>
+                                </p>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="col-md-8">
+
+                        <h2>Hej!</h2>
+                        <p>
+                            Jeg elsker at <strong class="text-primary">bygge ting</strong>. At tage en idé gennem skitsering og mockups til færdig produkt, og se sit design taget i brug.
+                        </p>
+                        <p>
+                            Jeg motiveres af at skabe ting, der skaber værdi for andre.
+                        </p>
+                        <p>
+                            <a class="btn btn-material-light-blue hide" href="#work">Se mit arbejde</a>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-12">
+            <h2 id="work" class="page-header text-center">Arbejde</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <div class="well">
+                        <h3>Emplate</h3>
+                        <p>
+                            Som medejer og udviklingsansvarlig for Emplate, har jeg har været med til at designe og bygge Emplates produkter & service.
+                        </p>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="row-action-primary">
+                                    <a href="#">
+                                        <i class="mdi-file-cloud"></i>
+                                    </a>
+                                </div>
+                                <div class="row-content">
+                                    <div class="least-content"><a href="http://emplate.it" target="_blank">Se systemet</a></div>
+
+                                    <h4 class="list-group-item-heading">Beacon Management System</h4>
+                                    <p class="list-group-item-text">Designet og implementeret backend & API</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                            <div class="list-group-item">
+                                <div class="row-action-primary">
+                                    <i class="mdi-action-android"></i>
+                                </div>
+                                <div class="row-content">
+                                    <div class="least-content"><a href="https://play.google.com/store/apps/details?id=dk.emplate" target="_blank">Hent appen</a></div>
+                                    <h4 class="list-group-item-heading">Android Applikation</h4>
+                                    <p class="list-group-item-text">Bruger iBeacons. Taler JSON med Emplates API</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="well" style="position:relative;">
+                        <div id="webapp-dialog" class="modal fade">
+                            <div class="modal-dialog">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                                        <h4 class="modal-title">Vil du høre mere om hvilke webapps jeg har bygget?</h4>
+                                    </div>
+                                    <div class="modal-body">
+                                        <p>
+                                            Jeg har lavet større og mindre systemer til danske og tyske virksomheder, men det er desværre ikke noget, jeg må fortælle om.
+                                        </p>
+                                        <p>
+                                            Skriv til mig, hvis du vil høre mere generelt om hvilke typer af webapps, jeg har erfaring med at bygge.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>Freelance</h3>
+                        <p>
+                            Jeg har udviklet websites for grafikere, kommunikationsbureauer og andre kunder professionelt i over 5 år.
+                        </p>
+
+                        <div class="list-group">
+                            <div class="list-group-item">
+                                <div class="row-action-primary">
+                                    <a href="#">
+                                        <i class="mdi-communication-business"></i>
+                                    </a>
+                                </div>
+                                <div class="row-content">
+                                    <div class="least-content"><a href="http://hauthorn-it.dk/referencer.html" target="_blank">Se referencer</a></div>
+                                    <h4 class="list-group-item-heading">Hjemmesider i WordPress</h4>
+                                    <p class="list-group-item-text">Til alt fra iværksættere og større virksomheder</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                            <div class="list-group-item">
+                                <div class="row-action-primary">
+                                    <i class="mdi-av-web"></i>
+                                </div>
+                                <div class="row-content">
+                                    <div class="least-content"><a href="#" data-target="#webapp-dialog" data-toggle="modal">Hør mere</a></div>
+
+                                    <h4 class="list-group-item-heading">Funktionelle Webapplikationer</h4>
+                                    <p class="list-group-item-text">Skræddersyede systemer i PHP (Laravel)</p>
+                                </div>
+                            </div>
+                            <div class="list-group-separator"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-md-6 col-md-offset-3 text-center">
+            <h2 id="contact" class="page-header">Kontakt</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="well">
+                        <p>
+                            Christoffer Hauthorn Boisen <br/>
+                            <a href="tel:+4542344471">42 34 44 71</a> <br/>
+                            <a href="mailto:chb@hauthorn-it.dk">chb@hauthorn-it.dk</a>
+                        </p>
+                        <p>
+                            LinkedIn:
+                            <a href="https://dk.linkedin.com/pub/christoffer-hauthorn-boisen/46/988/117" target="_blank" style="text-decoration:none;"><span><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="Vis Christoffer Hauthorn Boisens LinkedIn-profil">&nbsp;Vis Christoffer Hauthorn Boisens profil</span></a> <br/>
+                        </p>
+
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+
+<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/ripples.min.js"></script>
+<script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
+<script>
+    $.material.init();
+</script>
 </body>
 </html>
