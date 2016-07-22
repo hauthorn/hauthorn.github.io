@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>My work at Emplate - Christoffer Hauthorn</title>
+  <meta name="description" content="As Co-Founder and partly responsible for the tech stuff at Emplate, I've been a part of a great journey. This post contains some examples of the work we've d...">
+
+ 
+ 	<!-- Toggable comment block for external scripts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+ 	<!-- -->
+	
+  <link rel="stylesheet" href="/css/material.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://hauthorn.me/emplate/work/2016/07/16/my-work-at-emplate.html">
+  <link rel="alternate" type="application/rss+xml" title="Christoffer Hauthorn" href="http://hauthorn.me/feed.xml">
+</head>
+
+
+  <body>
+
+    <div class="hauth-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+
+          <header class="hauth-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><a href="/">Christoffer Hauthorn</a></span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="hauth-ribbon"></div>
+
+      <main class="hauth-main mdl-layout__content">
+        <div class="hauth-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="hauth-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+              <header class="post-header">
+                <h1 class="post-title" itemprop="name headline">My work at Emplate</h1>
+                <p class="post-meta mdl-color-text--grey-500"><time datetime="2016-07-16T19:02:37+02:00" itemprop="datePublished">Jul 16, 2016</time></p>
+              </header>
+
+              <div class="post-content" itemprop="articleBody">
+                <p>As Co-Founder and partly responsible for the tech stuff at Emplate, I’ve been at the center of the initial design and development of the Emplate platform and services, and is continually doing the best I can along with Søren Gregersen at Emplate to build the best features we can.</p>
+
+<p>So far, we’ve built a bunch of stuff that I’m proud of. Here is some of the stuff we’ve built:</p>
+
+<h3 id="beacon-management-system-version-1">Beacon Management System, version 1</h3>
+<p>The Emplate dashboard, beacon management and platform was initially built using Laravel 4 (then 5.0, 5.1 and 5.2), which is depicted below. The mobile clients fetched content and posted analytics data using an API that was specifically designed for our initial clients and use case. An example of the <a href="https://m.signalvnoise.com/the-majestic-monolith-29166d022228">majestic monolith</a> serving mobile apps and the administrative frontend. It was a design pattern which was a good fit for our developer team, which just consisted of the 2 technical founders.</p>
+
+<p><img src="http://emplate.it/wp-content/uploads/2013/10/hvordan-virker-emplate.png" alt="How Emplate Works" /></p>
+<p class="img-text">The content was created in the editor to the left, and sent to the clients.</p>
+
+<h4 id="overview-and-editor">Overview and Editor</h4>
+<p>The initial design was based around the organization having a few beacons, and some posts to show. This approach with large boxes and a three-column layout didn’t scale well with lots of content and beacons <em>(herningCentret have about 50 beacons deployed at the time of writing)</em>.</p>
+
+<p>This was later remidied in the angular application. I will be sure to publish some of the more interesting details at some point when we’ve iterated on the initial user feedback.</p>
+
+<p>The editor was designed using the drag-n-drop paradigm as well, and reused some of the visual cues from the overview. The mobile preview was part of the original design mockups, and have remained ever since. The original idea was to make it as accurate to the iPhone screen size as possible. This has unfortunately become less feasible given the multitude of sizes that Apple now use - and we haven’t even touched upon the Android marketplace.</p>
+
+<p>It was therefore decided that other features were more useful at the moment, and a close approximation seems to work nicely for our customers.</p>
+
+<p><img src="/assets/images/emplate-editor-v1.png" alt="The Content Editor, version 1" /></p>
+<p class="img-text">The editor, with the mobile preview on the right.</p>
+
+<p>The Editor was implemented using the blade templating language of laravel, along with a lot of jquery-ui elements. The editor was one the first asynchronous screens we created, as much of the interaction we wanted to achieve in order to create a fluid and powerful content creation experience.</p>
+
+<p>The initial design paradigm of “elements” of different types has served us well so far. The monolith makes it easy to implement a new type in the editor and backend, while also implementing the mobile view that is to be served to the mobile clients. Having this consolidated into one location makes it easy to reuse code between the preview and the actual webviews served to the client.</p>
+
+<p>The next post will include some of the work we’ve done on the mobile clients, along with the next version of the dashboard (in Angular).</p>
+
+<p>See you around!</p>
+
+
+              </div>
+
+            </article>
+          </div>
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+
+          <!-- New row for post navigation -->
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <nav class="post-nav mdl-color-text--grey-50 mdl-cell mdl-cell--8-col">
+            
+              <a href="/freelance/work/2016/07/16/freelance-work.html" class="nav-button">
+                <button data-upgraded=",MaterialButton,MaterialRipple" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                  <i class="material-icons">arrow_back</i>
+                <span class="mdl-button__ripple-container"><span style="width: 92.5097px; height: 92.5097px; transform: translate(-50%, -50%) translate(18px, 8px);" class="mdl-ripple is-animating"></span></span></button>
+                Freelance work
+              </a>
+            
+
+            <div class="section-spacer"></div>
+
+            
+          </nav>
+        </div>
+                <footer class="hauth-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              
+              
+              <li><a class="page-link" href="/about/">About</a></li>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </ul>
+          </div>
+        </footer>
+<script src="/js/material.min.js"></script>
+      </main>
+    
+    </div>
+
+  </body>
+
+</html>

@@ -1,0 +1,153 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Christoffer Hauthorn</title>
+    <description>My name is Christoffer Hauthorn Boisen, and I&#39;m one of the technical co-founders of Emplate ApS and a Computer Science student at Aarhus University.
+</description>
+    <link>http://hauthorn.me/</link>
+    <atom:link href="http://hauthorn.me/feed.xml" rel="self" type="application/rss+xml"/>
+    <pubDate>Fri, 22 Jul 2016 15:07:27 +0200</pubDate>
+    <lastBuildDate>Fri, 22 Jul 2016 15:07:27 +0200</lastBuildDate>
+    <generator>Jekyll v3.1.6</generator>
+    
+      <item>
+        <title>My work at Emplate</title>
+        <description>&lt;p&gt;As Co-Founder and partly responsible for the tech stuff at Emplate, I’ve been at the center of the initial design and development of the Emplate platform and services, and is continually doing the best I can along with Søren Gregersen at Emplate to build the best features we can.&lt;/p&gt;
+
+&lt;p&gt;So far, we’ve built a bunch of stuff that I’m proud of. Here is some of the stuff we’ve built:&lt;/p&gt;
+
+&lt;h3 id=&quot;beacon-management-system-version-1&quot;&gt;Beacon Management System, version 1&lt;/h3&gt;
+&lt;p&gt;The Emplate dashboard, beacon management and platform was initially built using Laravel 4 (then 5.0, 5.1 and 5.2), which is depicted below. The mobile clients fetched content and posted analytics data using an API that was specifically designed for our initial clients and use case. An example of the &lt;a href=&quot;https://m.signalvnoise.com/the-majestic-monolith-29166d022228&quot;&gt;majestic monolith&lt;/a&gt; serving mobile apps and the administrative frontend. It was a design pattern which was a good fit for our developer team, which just consisted of the 2 technical founders.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;http://emplate.it/wp-content/uploads/2013/10/hvordan-virker-emplate.png&quot; alt=&quot;How Emplate Works&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;img-text&quot;&gt;The content was created in the editor to the left, and sent to the clients.&lt;/p&gt;
+
+&lt;h4 id=&quot;overview-and-editor&quot;&gt;Overview and Editor&lt;/h4&gt;
+&lt;p&gt;The initial design was based around the organization having a few beacons, and some posts to show. This approach with large boxes and a three-column layout didn’t scale well with lots of content and beacons &lt;em&gt;(herningCentret have about 50 beacons deployed at the time of writing)&lt;/em&gt;.&lt;/p&gt;
+
+&lt;p&gt;This was later remidied in the angular application. I will be sure to publish some of the more interesting details at some point when we’ve iterated on the initial user feedback.&lt;/p&gt;
+
+&lt;p&gt;The editor was designed using the drag-n-drop paradigm as well, and reused some of the visual cues from the overview. The mobile preview was part of the original design mockups, and have remained ever since. The original idea was to make it as accurate to the iPhone screen size as possible. This has unfortunately become less feasible given the multitude of sizes that Apple now use - and we haven’t even touched upon the Android marketplace.&lt;/p&gt;
+
+&lt;p&gt;It was therefore decided that other features were more useful at the moment, and a close approximation seems to work nicely for our customers.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/emplate-editor-v1.png&quot; alt=&quot;The Content Editor, version 1&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;img-text&quot;&gt;The editor, with the mobile preview on the right.&lt;/p&gt;
+
+&lt;p&gt;The Editor was implemented using the blade templating language of laravel, along with a lot of jquery-ui elements. The editor was one the first asynchronous screens we created, as much of the interaction we wanted to achieve in order to create a fluid and powerful content creation experience.&lt;/p&gt;
+
+&lt;p&gt;The initial design paradigm of “elements” of different types has served us well so far. The monolith makes it easy to implement a new type in the editor and backend, while also implementing the mobile view that is to be served to the mobile clients. Having this consolidated into one location makes it easy to reuse code between the preview and the actual webviews served to the client.&lt;/p&gt;
+
+&lt;p&gt;The next post will include some of the work we’ve done on the mobile clients, along with the next version of the dashboard (in Angular).&lt;/p&gt;
+
+&lt;p&gt;See you around!&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 16 Jul 2016 19:02:37 +0200</pubDate>
+        <link>http://hauthorn.me/emplate/work/2016/07/16/my-work-at-emplate.html</link>
+        <guid isPermaLink="true">http://hauthorn.me/emplate/work/2016/07/16/my-work-at-emplate.html</guid>
+        
+        
+        <category>emplate</category>
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>Freelance work</title>
+        <description>&lt;p&gt;I’ve been doing freelance work for my own clients and through a number of advertising and graphical agencies. I started out building simple static sites and dynamic sites in PHP and WordPress. By examining the code of other developers and through a lot of tutorials, books and other material, I started delving into learning object oriented programming and building applications for the desktop. Unfortunately, not a lot of businesses in rural Denmark need anything more than a simple portfolio website or a small e-commerce site.&lt;/p&gt;
+
+&lt;div class=&quot;mdl-grid&quot;&gt;
+	&lt;div class=&quot;mdl-cell mdl-cell--6-col&quot;&gt;
+		&lt;img src=&quot;/assets/images/businessparkstruer.jpg&quot; alt=&quot;BusinessPark Struer site&quot; /&gt;
+		&lt;p class=&quot;img-text&quot;&gt;The local co-working space BusinessPark Struer&lt;/p&gt;
+	&lt;/div&gt;
+	&lt;div class=&quot;mdl-cell mdl-cell--6-col&quot;&gt;
+		&lt;img src=&quot;/assets/images/conpleks.jpg&quot; alt=&quot;Conpleks site&quot; /&gt;
+		&lt;p class=&quot;img-text&quot;&gt;Conpleks.com&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;I therefore started coding and implementing the designs of a web and graphical design business called &lt;a href=&quot;http://www.kommuniklame.dk/&quot;&gt;Kommuniklame&lt;/a&gt;, and other clients soon followed. Before I went on to start &lt;a href=&quot;http://emplate.it&quot;&gt;Emplate&lt;/a&gt;, I had done more than 200 projects. The projects varied in size from a new image gallery on a portfolio site, to a complete webshops including custom campaign subsites and inventory management and automation.&lt;/p&gt;
+
+&lt;p&gt;I discovered the great &lt;a href=&quot;https://laravel.com/&quot;&gt;Laravel&lt;/a&gt;, and also built custom applications for myself and two large clients in the automotive industry and consumer electronics, which I’m not allowed to disclose publicly.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-php&quot; data-lang=&quot;php&quot;&gt;&lt;span class=&quot;cp&quot;&gt;&amp;lt;?php&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;Project&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;extends&lt;/span&gt; &lt;span class=&quot;nx&quot;&gt;Eloquent&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+	&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;timesheets&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;()&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$this&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;hasMany&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Timesheet&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;project_id&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scopeInvoicable&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;where&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;status&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;=&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;mi&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;orderBy&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;updated_at&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;DESC&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;);&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;
+
+	&lt;span class=&quot;k&quot;&gt;public&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;function&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;scopeThisMonth&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+		&lt;span class=&quot;nv&quot;&gt;$next_month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Y-m-d H:i:s&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; 
+			&lt;span class=&quot;nb&quot;&gt;strtotime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;first day of next month today&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+		&lt;span class=&quot;nv&quot;&gt;$this_month&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;date&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;Y-m-d H:i:s&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt;
+			&lt;span class=&quot;nb&quot;&gt;strtotime&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;first day of this month today&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+		&lt;span class=&quot;k&quot;&gt;return&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$query&lt;/span&gt;
+			&lt;span class=&quot;o&quot;&gt;-&amp;gt;&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;whereBetween&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;invoicedate&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;array&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;nv&quot;&gt;$this_month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;nv&quot;&gt;$next_month&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;));&lt;/span&gt;
+	&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;Some code from a timetracking project for internal use in Laravel 3 (i think). Please note the lovely use of &lt;code class=&quot;highlighter-rouge&quot;&gt;array()&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;I hope to open-source some of the work I’ve done in the near future.&lt;/p&gt;
+
+</description>
+        <pubDate>Sat, 16 Jul 2016 12:00:00 +0200</pubDate>
+        <link>http://hauthorn.me/freelance/work/2016/07/16/freelance-work.html</link>
+        <guid isPermaLink="true">http://hauthorn.me/freelance/work/2016/07/16/freelance-work.html</guid>
+        
+        
+        <category>freelance</category>
+        
+        <category>work</category>
+        
+      </item>
+    
+      <item>
+        <title>Jekyll new site</title>
+        <description>&lt;p&gt;I’ve built a new site during my vacation using Jekyll and Material Design Lite. The primary reason was to allow for easier incremental updates and blog posts about (interesting) work that I do. I wanted to change my approach from complete overhauls every 6 months, and hopefully make it easier for myself to update more frequently.&lt;/p&gt;
+
+&lt;h4 id=&quot;jekyll&quot;&gt;Jekyll&lt;/h4&gt;
+&lt;p&gt;It’s been a breeze to use &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll&lt;/a&gt; to build the site. Jekyll is basically a tool to build your website with all the features of using a CMS, but without ever having to fiddle with a database.
+It compiles assets, static files and content files to a complete static site, which you can deploy anywhere.&lt;/p&gt;
+
+&lt;h4 id=&quot;material-design-lite&quot;&gt;Material Design Lite&lt;/h4&gt;
+&lt;p&gt;I wanted the site to use the material design language from Google, but didn’t want to bother with implementing the components myself. &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Material Design Lite&lt;/a&gt; to the rescue!&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/material-design-lite-logo.png&quot; alt=&quot;Material Design Lite logo&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;image-text&quot;&gt;The Material Design Lite logo. © Google, 2015&lt;/p&gt;
+
+&lt;p&gt;From their website:&lt;/p&gt;
+
+&lt;blockquote&gt;
+  &lt;p&gt;Material Design Lite lets you add a Material Design look and feel to your websites.
+It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;This was a good match for my intentions, as I had no intention on using jQuery or fancy interaction for the site. Also, they had color theming built into the framework, which makes it easy to customize colors to my liking.&lt;/p&gt;
+
+&lt;p&gt;Now I’m off to the lake here in Monvalle, Italy. See you soon!&lt;/p&gt;
+
+</description>
+        <pubDate>Fri, 15 Jul 2016 12:00:00 +0200</pubDate>
+        <link>http://hauthorn.me/update/site/2016/07/15/new-site.html</link>
+        <guid isPermaLink="true">http://hauthorn.me/update/site/2016/07/15/new-site.html</guid>
+        
+        
+        <category>update</category>
+        
+        <category>site</category>
+        
+      </item>
+    
+  </channel>
+</rss>

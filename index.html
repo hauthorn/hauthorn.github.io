@@ -1,269 +1,143 @@
 <!DOCTYPE html>
 <html>
-<head lang="da">
-    <meta charset="UTF-8">
-    <title>Christoffer Hauthorn</title>
-    <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/roboto.min.css"/>
-    <link rel="stylesheet" href="bower_components/bootstrap-material-design/dist/css/material.min.css"/>
-    <style>
-        body {
-            margin-bottom: 60px;
-        }
 
-        header {
-            padding-top: 2em;
-        }
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        .my-name img {
-            border-radius: 50%; /* Give it that ellipse shape for fun */
-            max-width: 200px !important;
-            margin-top: 0.5em;
-        }
+  <title>Christoffer Hauthorn</title>
+  <meta name="description" content="My name is Christoffer Hauthorn Boisen, and I'm one of the technical co-founders of Emplate ApS and a Computer Science student at Aarhus University.
+">
 
-        .my-name h1 {
-            font-size: 21px;
-            margin-bottom: 0;
-        }
-        .my-name p {
-            font-size: inherit;
-        }
-
-        a,
-        a:hover,
-        a:focus,
-        .text-primary {
-            color: #03a9f4;
-        }
-
-        ul {
-            list-style: none;
-        }
-
-        .list-group .list-group-item .row-picture i,
-        .list-group .list-group-item .row-action-primary i {
-            background-color: #03A9F4;
-        }
-
-        .list-group {
-            padding-top: 1em;
-        }
-
-        #webapp-dialog.modal {
-            position: absolute;
-            padding-right: 0 !important;
-        }
-
-        #webapp-dialog.modal .modal-dialog {
-            width: 90%;
-        }
-    </style>
+ 
+ 	<!-- Toggable comment block for external scripts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+ 	<!-- -->
+	
+  <link rel="stylesheet" href="/css/material.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://hauthorn.me/">
+  <link rel="alternate" type="application/rss+xml" title="Christoffer Hauthorn" href="http://hauthorn.me/feed.xml">
 </head>
-<body>
 
-<header class="header-panel shadow-z-1 well-material-light-blue">
-    <!-- I'm just here to frame the site and look pretty while doing so -->
-</header>
-<div class="container" style="padding-top: 2em">
-    <div class="row">
-        <div class="col-md-12">
 
-            <div class="jumbotron">
-                <div class="row">
-                    <div class="col-md-4 my-name">
-                        <div class="row">
-                            <div class="col-md-12">
-                                <img src="img/christoffer-hauthorn-boisen.jpg" alt="Christoffer Hauthorn" class="center-block img-responsive"/>
-                            </div>
-                            <div class="col-md-12 text-center">
-                                <h1>Christoffer Hauthorn Boisen</h1>
-                                <p>
-                                    <small>Stud. Bachelor i IT Produktudvikling & iværksætter</small>
-                                </p>
-                            </div>
-                        </div>
-
-                    </div>
-                    <div class="col-md-8">
-
-                        <h2>Hej!</h2>
-                        <p>
-                            Jeg elsker at <strong class="text-primary">bygge ting</strong>. At tage en idé gennem skitsering og mockups til færdig produkt, og se sit design taget i brug.
-                        </p>
-                        <p>
-                            Jeg motiveres af at skabe ting, der skaber værdi for andre.
-                        </p>
-                        <p>
-                            Har fart over feltet og dedikerer min tid til studie og Emplate.
-                        </p>
-                        <p>
-                            <a class="btn btn-material-light-blue hidden-lg hidden-md" href="#work">Se mit arbejde</a>
-                        </p>
-
-                    </div>
-                </div>
-            </div>
+  <body class="mdl-demo hauth-homepage mdl-color--grey-100 mdl-color-text--grey-700 mdl-base">
+    <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
+          <header class="hauth-header mdl-layout__header mdl-layout__header--scroll mdl-color--primary mdl-color-text--white">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><a href="/">Christoffer Hauthorn</a></span>
+          <div class="mdl-layout-spacer"></div>
         </div>
+      </header>      
+
+      <main class="mdl-layout__content">
+          <!-- Welcome card -->
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--grey-200 mdl-color-text--white">
+    <img class="my-image" src="/assets/images/christoffer-square.jpg" alt="Christoffer Hauthorn Boisen">
+  </header>
+  <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+    <div class="mdl-card__supporting-text">
+      <h4>Hello!</h4>
+        My name is Christoffer Hauthorn Boisen, and I'm one of the technical co-founders of Emplate ApS and a Computer Science student at Aarhus University.
+        <br>
+        &nbsp;
+        <br>
+        This site serves as a personal portfolio and a blog that I sporadically update with the stuff that goes on in my work-life.
+
     </div>
-    <div class="row">
-        <div class="col-md-12">
-            <h2 id="work" class="page-header text-center">Arbejde</h2>
-            <div class="row">
-                <div class="col-md-6">
-                    <div class="well">
-                        <h3>Emplate</h3>
-                        <p>
-                            Som medejer og udviklingsansvarlig for Emplate, har jeg blandt andet været med til at designe og bygge Emplates produkter &amp; service.
-                        </p>
+    <div class="mdl-card__actions">
+      
+      
+      <a href="/about/" class="mdl-button">About</a>
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+    </div>
+  </div>
+</section>
 
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-action-primary">
-                                    <a href="#">
-                                        <i class="mdi-file-cloud"></i>
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="least-content"><a href="http://emplate.it" target="_blank">Se systemet</a></div>
-
-                                    <h4 class="list-group-item-heading">Beacon Management System</h4>
-                                    <p class="list-group-item-text">Designet og implementeret backend &amp; frontend</p>
-                                </div>
-                            </div>
-                            <div class="list-group-separator"></div>
-                            <div class="list-group-item">
-                                <div class="row-action-primary">
-                                    <a href="#">
-                                        <i class="mdi-file-cloud"></i>
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <h4 class="list-group-item-heading">RESTful API</h4>
-                                    <p class="list-group-item-text">Designet og implementeret JSON API</p>
-                                </div>
-                            </div>
-                            <div class="list-group-separator"></div>
-                            <div class="list-group-item">
-                                <div class="row-action-primary">
-                                    <i class="mdi-action-android"></i>
-                                </div>
-                                <div class="row-content">
-                                    <div class="least-content"><a href="https://play.google.com/store/apps/details?id=dk.emplate" target="_blank">Hent appen</a></div>
-                                    <h4 class="list-group-item-heading">Android Applikation</h4>
-                                    <p class="list-group-item-text">Bruger iBeacons. Taler JSON med Emplates API</p>
-                                </div>
-                            </div>
-                            <div class="list-group-separator"></div>
-                        </div>
-
-                    </div>
-                </div>
-                <div class="col-md-6">
-                    <div class="well" style="position:relative;">
-                        <div id="webapp-dialog" class="modal fade">
-                            <div class="modal-dialog">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
-                                        <h4 class="modal-title">Vil du høre mere om hvilke webapps jeg har bygget?</h4>
-                                    </div>
-                                    <div class="modal-body">
-                                        <p>
-                                            Jeg har lavet større og mindre systemer til danske og tyske virksomheder, men det er desværre ikke noget, jeg må fortælle om.
-                                        </p>
-                                        <p>
-                                            Skriv til mig, hvis du vil høre mere generelt om hvilke typer af webapps, jeg har erfaring med at bygge.
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h3>Freelance</h3>
-                        <p>
-                            Jeg har udviklet websites for grafikere, kommunikationsbureauer og andre kunder professionelt i over 5 år.
-                        </p>
-
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-action-primary">
-                                    <a href="#">
-                                        <i class="mdi-communication-business"></i>
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="least-content"><a href="http://hauthorn-it.dk/referencer.html" target="_blank">Se referencer</a></div>
-                                    <h4 class="list-group-item-heading">Hjemmesider i WordPress</h4>
-                                    <p class="list-group-item-text">Til alt fra iværksættere og større virksomheder</p>
-                                </div>
-                            </div>
-                            <div class="list-group-separator"></div>
-                            <div class="list-group-item">
-                                <div class="row-action-primary">
-                                    <i class="mdi-av-web"></i>
-                                </div>
-                                <div class="row-content">
-                                    <div class="least-content"><a href="#" data-target="#webapp-dialog" data-toggle="modal">Hør mere</a></div>
-
-                                    <h4 class="list-group-item-heading">Funktionelle Webapplikationer</h4>
-                                    <p class="list-group-item-text">Skræddersyede systemer i PHP (Laravel)</p>
-                                </div>
-                            </div>
-                            <div class="list-group-separator"></div>
-                        </div>
-                    </div>
-                    <div class="well">
-                        <h3>IT Product Development</h3>
-                        <p>
-                            Som IT-studerende på Aarhus Universitet får man rig mulighed for at lave spændende projekter med design, prototyping og implementering af både software og fysiske artefakter.
-                        </p>
-
-                        <div class="list-group">
-                            <div class="list-group-item">
-                                <div class="row-action-primary">
-                                    <a href="#">
-                                        <i class="mdi-hardware-desktop-windows"></i>
-                                    </a>
-                                </div>
-                                <div class="row-content">
-                                    <div class="least-content hide"><a href="#" target="_blank">Se projektet</a></div>
-                                    <h4 class="list-group-item-heading">Timeball</h4>
-                                    <p class="list-group-item-text">Prototype: Computerspil og 3D-printet controller</p>
-                                </div>
-                            </div>
-                            <div class="list-group-separator"></div>
-                        </div>
-
-                    </div>
-                </div>
-            </div>
+<!-- Recent blog posts -->
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+      <h4 class="mdl-cell mdl-cell--12-col">Recent Posts</h4>
+      
+      <!-- Show 5 posts -->
+      
+      <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+        <div class="section__circle-container__circle mdl-color--primary">
         </div>
+      </div>
+      <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+        <h5>My work at Emplate</h5>
+        As Co-Founder and partly responsible for the tech stuff at Emplate, I've been a part of a great journey. This post contains some examples of the work we've done so far. <a href="/emplate/work/2016/07/16/my-work-at-emplate.html">Read more</a>
+      </div>
+      
+      <!-- Show 5 posts -->
+      
+      <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+        <div class="section__circle-container__circle mdl-color--primary">
+        </div>
+      </div>
+      <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+        <h5>Freelance work</h5>
+        I've been build business and e-commerce websites for graphical agencies and my own client for 5 years professionally. Here is some of the work, that I'm allowed to disclose. <a href="/freelance/work/2016/07/16/freelance-work.html">Read more</a>
+      </div>
+      
+      <!-- Show 5 posts -->
+      
+      <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+        <div class="section__circle-container__circle mdl-color--primary">
+        </div>
+      </div>
+      <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+        <h5>Jekyll new site</h5>
+        The new Portfolio site is online. The site is built using Jekyll and material design lite. The material design lite library makes it a breeze to get the material design look and feel. <a href="/update/site/2016/07/15/new-site.html">Read more</a>
+      </div>
+      
+    </div>
+    <!-- TODO: Add category links here
+    <div class="mdl-card__actions">
+      <a href="#" class="mdl-button">Read our features</a>
+    </div>
+    -->
+  </div>
+</section>
+
+                <footer class="hauth-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              
+              
+              <li><a class="page-link" href="/about/">About</a></li>
+              
+              
+              
+              
+              
+              
+              
+              
+              
+              
+            </ul>
+          </div>
+        </footer>
+<script src="/js/material.min.js"></script>
+      </main>
+    
     </div>
 
-    <div class="row">
-        <div class="col-md-6 col-md-offset-3 text-center">
-            <h2 id="contact" class="page-header">Kontakt</h2>
-            <div class="row">
-                <div class="col-md-12">
-                    <div class="well">
-                        <p>
-                            Christoffer Hauthorn Boisen <br/>
-                        </p>
-                        <p>
-                            LinkedIn:
-                            <a href="https://dk.linkedin.com/pub/christoffer-hauthorn-boisen/46/988/117" target="_blank" style="text-decoration:none;"><span><img src="https://static.licdn.com/scds/common/u/img/webpromo/btn_in_20x15.png" width="20" height="15" alt="Vis Christoffer Hauthorn Boisens LinkedIn-profil">&nbsp;Vis Christoffer Hauthorn Boisens profil</span></a> <br/>
-                        </p>
+  </body>
 
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </div>
-</div>
-
-
-<script src="//code.jquery.com/jquery-1.10.2.min.js"></script>
-<script src="//maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
-<script src="bower_components/bootstrap-material-design/dist/js/material.min.js"></script>
-</body>
 </html>
