@@ -6,8 +6,8 @@
 </description>
     <link>http://hauthorn.me/</link>
     <atom:link href="http://hauthorn.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Fri, 22 Jul 2016 15:35:01 +0200</pubDate>
-    <lastBuildDate>Fri, 22 Jul 2016 15:35:01 +0200</lastBuildDate>
+    <pubDate>Fri, 22 Jul 2016 15:39:55 +0200</pubDate>
+    <lastBuildDate>Fri, 22 Jul 2016 15:39:55 +0200</lastBuildDate>
     <generator>Jekyll v3.1.6</generator>
     
       <item>
@@ -123,8 +123,15 @@ It compiles assets, static files and content files to a complete static site, wh
 &lt;h4 id=&quot;material-design-lite&quot;&gt;Material Design Lite&lt;/h4&gt;
 &lt;p&gt;I wanted the site to use the material design language from Google, but didn’t want to bother with implementing the components myself. &lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Material Design Lite&lt;/a&gt; to the rescue!&lt;/p&gt;
 
-&lt;p&gt;&lt;img src=&quot;/assets/images/material-design-lite-logo.png&quot; alt=&quot;Material Design Lite logo&quot; /&gt;&lt;/p&gt;
-&lt;p class=&quot;image-text&quot;&gt;The Material Design Lite logo. © Google, 2015&lt;/p&gt;
+&lt;div class=&quot;mdl-grid&quot;&gt;
+	&lt;div class=&quot;mdl-cell mdl-cell--4-col&quot;&gt; &lt;/div&gt;
+&lt;div class=&quot;mdl-cell mdl-cell--4-col&quot;&gt;
+	&lt;img src=&quot;/assets/images/material-design-lite-logo.png&quot; alt=&quot;Material Design Lite logo&quot; /&gt;
+	&lt;p class=&quot;image-text&quot;&gt;The Material Design Lite logo. &lt;br /&gt;
+	© Google, 2015&lt;/p&gt;
+&lt;/div&gt;
+&lt;div class=&quot;mdl-cell mdl-cell--4-col&quot;&gt; &lt;/div&gt;
+&lt;/div&gt;
 
 &lt;p&gt;From their website:&lt;/p&gt;
 
