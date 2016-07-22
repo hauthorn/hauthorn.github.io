@@ -239,7 +239,8 @@ blockquote p {
 .mdl-demo section .section__text a {
   text-decoration: none; }
 
-.mdl-demo section .section__circle-container > .section__circle-container__circle {
+.mdl-demo section .section__circle-container .section__circle-container__circle,
+.mdl-demo section .section__circle-container img {
   width: 64px;
   height: 64px;
   border-radius: 32px;
