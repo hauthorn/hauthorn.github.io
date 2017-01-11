@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Minesweeper holidays - Christoffer Hauthorn</title>
+  <meta name="description" content="I've created a typescript version of the minesweeper game, and an AI that plays it for me. Implemented using Angular 2 and with Angular Material of course.">
+
+ 
+ 	<!-- Toggable comment block for external scripts -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en">
+ 	<!-- -->
+	
+  <link rel="stylesheet" href="/css/material.min.css">
+  <link rel="stylesheet" href="/css/main.css">
+  <link rel="canonical" href="http://hauthorn.me/2016/12/29/minesweeper-holidays">
+  <link rel="alternate" type="application/rss+xml" title="Christoffer Hauthorn" href="http://hauthorn.me/feed.xml">
+</head>
+
+
+  <body>
+
+    <div class="hauth-layout mdl-layout mdl-layout--fixed-header mdl-js-layout mdl-color--grey-100">
+
+          <header class="hauth-header mdl-layout__header mdl-layout__header--scroll mdl-color--grey-100 mdl-color-text--grey-800">
+        <div class="mdl-layout__header-row">
+          <span class="mdl-layout-title"><a href="/">Christoffer Hauthorn</a></span>
+          <div class="mdl-layout-spacer"></div>
+        </div>
+      </header>
+      <div class="hauth-ribbon"></div>
+
+      <main class="hauth-main mdl-layout__content">
+        <div class="hauth-container mdl-grid">
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <div class="hauth-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
+            <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
+              <header class="post-header">
+                <h1 class="post-title" itemprop="name headline">Minesweeper holidays</h1>
+                <p class="post-meta mdl-color-text--grey-500"><time datetime="2016-12-29T20:12:37+01:00" itemprop="datePublished">Dec 29, 2016</time></p>
+              </header>
+
+              <div class="post-content" itemprop="articleBody">
+                <p>I’ve created a small minesweeper game in Angular 2 to refresh my Typescript in the holidays. I decided to give the <a href="https://github.com/angular/angular-cli">Angular-CLI</a> a spin, and check the current state of <a href="https://material.angular.io/">Angular Material 2</a>.</p>
+
+<p>I also wanted to try some game AI technigues, so the game and the AI is inspired by a chapter in <a href="https://www.amazon.com/Introduction-Game-AI-Neil-Kirby/dp/1598639986">Introduction to Game AI</a>. The original project in the book is implemented in Visual Basic, and with quite a different aesthetic.</p>
+
+<p><img src="/assets/images/minesweep-ai.png" alt="AI in action" /></p>
+<p class="img-text">The rules based AI in action. Notice the sidebar text is a little cramped.</p>
+
+<h4 id="the-ai">The AI</h4>
+<p>The AI is a rules based AI. Every iteration, every possible rules efficiency is evaluated, and the one yielding the highest score wins. For example, the “mark fields as bombs”-rule has a score equal to the number of fields we are 100% sure are bombs at the current state of the board.</p>
+
+<p>The AI picks the rule with the highest score at every iteration. This usually results in it either marking a set of fields as bombs, or exposing a set of fields that it knows are safe.</p>
+
+<p>I choose not to make the AI “guess” when there are no more fields so safely mark or expose (it happens in minesweeper), as I do not want to take away the <em>thrill of failing</em> away from the user.</p>
+
+<h4 id="take-it-for-a-spin">Take it for a spin</h4>
+<p>You can <a href="http://hauthorn.me/ng-minesweep/">try the minesweeper game</a> here on this site. It’s published using github pages, which is easy to do using the angular cli (just run <code class="highlighter-rouge">ng github-pages:deploy</code>, and you are golden).</p>
+
+              </div>
+
+            </article>
+          </div>
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+
+          <!-- New row for post navigation -->
+          <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
+          <nav class="post-nav mdl-color-text--grey-50 mdl-cell mdl-cell--8-col">
+            
+              <a href="/2016/07/16/my-work-at-emplate" class="nav-button">
+                <button data-upgraded=",MaterialButton,MaterialRipple" class="mdl-button mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
+                  <i class="material-icons">arrow_back</i>
+                </button>
+                My work at Emplate
+              </a>
+            
+
+            <div class="section-spacer"></div>
+
+            
+          </nav>
+        </div>
+                <footer class="hauth-footer mdl-mini-footer">
+          <div class="mdl-mini-footer--left-section">
+            <ul class="mdl-mini-footer--link-list">
+              
+              
+              <li><a class="page-link" href="/about/">About</a></li>
+              
+              
+              
+              
+              
+              
+              
+              
+            </ul>
+          </div>
+        </footer>
+<script src="/js/material.min.js"></script>
+      </main>
+    
+    </div>
+
+  </body>
+
+</html>

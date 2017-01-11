@@ -6,9 +6,37 @@
 </description>
     <link>http://hauthorn.me/</link>
     <atom:link href="http://hauthorn.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sun, 31 Jul 2016 18:24:14 +0200</pubDate>
-    <lastBuildDate>Sun, 31 Jul 2016 18:24:14 +0200</lastBuildDate>
+    <pubDate>Wed, 11 Jan 2017 22:40:26 +0100</pubDate>
+    <lastBuildDate>Wed, 11 Jan 2017 22:40:26 +0100</lastBuildDate>
     <generator>Jekyll v3.1.0</generator>
+    
+      <item>
+        <title>Minesweeper holidays</title>
+        <description>&lt;p&gt;I’ve created a small minesweeper game in Angular 2 to refresh my Typescript in the holidays. I decided to give the &lt;a href=&quot;https://github.com/angular/angular-cli&quot;&gt;Angular-CLI&lt;/a&gt; a spin, and check the current state of &lt;a href=&quot;https://material.angular.io/&quot;&gt;Angular Material 2&lt;/a&gt;.&lt;/p&gt;
+
+&lt;p&gt;I also wanted to try some game AI technigues, so the game and the AI is inspired by a chapter in &lt;a href=&quot;https://www.amazon.com/Introduction-Game-AI-Neil-Kirby/dp/1598639986&quot;&gt;Introduction to Game AI&lt;/a&gt;. The original project in the book is implemented in Visual Basic, and with quite a different aesthetic.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/minesweep-ai.png&quot; alt=&quot;AI in action&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;img-text&quot;&gt;The rules based AI in action. Notice the sidebar text is a little cramped.&lt;/p&gt;
+
+&lt;h4 id=&quot;the-ai&quot;&gt;The AI&lt;/h4&gt;
+&lt;p&gt;The AI is a rules based AI. Every iteration, every possible rules efficiency is evaluated, and the one yielding the highest score wins. For example, the “mark fields as bombs”-rule has a score equal to the number of fields we are 100% sure are bombs at the current state of the board.&lt;/p&gt;
+
+&lt;p&gt;The AI picks the rule with the highest score at every iteration. This usually results in it either marking a set of fields as bombs, or exposing a set of fields that it knows are safe.&lt;/p&gt;
+
+&lt;p&gt;I choose not to make the AI “guess” when there are no more fields so safely mark or expose (it happens in minesweeper), as I do not want to take away the &lt;em&gt;thrill of failing&lt;/em&gt; away from the user.&lt;/p&gt;
+
+&lt;h4 id=&quot;take-it-for-a-spin&quot;&gt;Take it for a spin&lt;/h4&gt;
+&lt;p&gt;You can &lt;a href=&quot;http://hauthorn.me/ng-minesweep/&quot;&gt;try the minesweeper game&lt;/a&gt; here on this site. It’s published using github pages, which is easy to do using the angular cli (just run &lt;code class=&quot;highlighter-rouge&quot;&gt;ng github-pages:deploy&lt;/code&gt;, and you are golden).&lt;/p&gt;
+</description>
+        <pubDate>Thu, 29 Dec 2016 20:12:37 +0100</pubDate>
+        <link>http://hauthorn.me/2016/12/29/minesweeper-holidays</link>
+        <guid isPermaLink="true">http://hauthorn.me/2016/12/29/minesweeper-holidays</guid>
+        
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>My work at Emplate</title>
