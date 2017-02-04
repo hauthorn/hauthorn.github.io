@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Minesweeper holidays - Christoffer Hauthorn</title>
-  <meta name="description" content="I've created a typescript version of the minesweeper game, and an AI that plays it for me. Implemented using Angular 2 and with Angular Material of course.">
+  <title>Bachelor project: GEAR - Christoffer Hauthorn</title>
+  <meta name="description" content="I've finished my bachelor project. We use gaze tracking and voice recognition to improve development workflow. Watch the video to see the final prototype.">
 
  
  	<!-- Toggable comment block for external scripts -->
@@ -17,7 +17,7 @@
 	
   <link rel="stylesheet" href="/css/material.min.css">
   <link rel="stylesheet" href="/css/main.css">
-  <link rel="canonical" href="http://hauthorn.me/2016/12/29/minesweeper-holidays">
+  <link rel="canonical" href="http://hauthorn.me/2017/02/04/bachelor-gear">
   <link rel="alternate" type="application/rss+xml" title="Christoffer Hauthorn" href="http://hauthorn.me/feed.xml">
 </head>
 
@@ -40,27 +40,34 @@
           <div class="hauth-content mdl-color--white mdl-shadow--4dp content mdl-color-text--grey-800 mdl-cell mdl-cell--8-col">
             <article class="post" itemscope itemtype="http://schema.org/BlogPosting">
               <header class="post-header">
-                <h1 class="post-title" itemprop="name headline">Minesweeper holidays</h1>
-                <p class="post-meta mdl-color-text--grey-500"><time datetime="2016-12-29T20:12:37+01:00" itemprop="datePublished">Dec 29, 2016</time></p>
+                <h1 class="post-title" itemprop="name headline">Bachelor project: GEAR</h1>
+                <p class="post-meta mdl-color-text--grey-500"><time datetime="2017-02-04T14:00:00+01:00" itemprop="datePublished">Feb 4, 2017</time></p>
               </header>
 
               <div class="post-content" itemprop="articleBody">
-                <p>I’ve created a small minesweeper game in Angular 2 to refresh my Typescript in the holidays. I decided to give the <a href="https://github.com/angular/angular-cli">Angular-CLI</a> a spin, and check the current state of <a href="https://material.angular.io/">Angular Material 2</a>.</p>
+                <p>I’ve finished my bachelor project for the Bachelor in IT at Aarhus University. The project ran for 6 months total, alongside other courses. The project was done by me and 3 other bachelor students. The question we tried to answer with this project was:</p>
 
-<p>I also wanted to try some game AI technigues, so the game and the AI is inspired by a chapter in <a href="https://www.amazon.com/Introduction-Game-AI-Neil-Kirby/dp/1598639986">Introduction to Game AI</a>. The original project in the book is implemented in Visual Basic, and with quite a different aesthetic.</p>
+<p><strong>“How can we use a combination of gaze- and speech-interaction to aid software developers?”</strong></p>
 
-<p><img src="/assets/images/minesweep-ai.png" alt="AI in action" /></p>
-<p class="img-text">The rules based AI in action. Notice the sidebar text is a little cramped.</p>
+<p>Our vision for the project was established early. We wanted the developer to <em>simply look at the code, and say what he wants to happen</em>.</p>
 
-<h4 id="the-ai">The AI</h4>
-<p>The AI is a rules based AI. Every iteration, every possible rules efficiency is evaluated, and the one yielding the highest score wins. For example, the “mark fields as bombs”-rule has a score equal to the number of fields we are 100% sure are bombs at the current state of the board.</p>
+<p><img src="/assets/images/gear-usage.png" alt="Gear screen" /></p>
+<p class="img-text">The prototype in action: A developer simply looks at the screen, and speaks to his computer.</p>
 
-<p>The AI picks the rule with the highest score at every iteration. This usually results in it either marking a set of fields as bombs, or exposing a set of fields that it knows are safe.</p>
+<h2 id="gear---gaze-enhanced-audio-recognition">GEAR - Gaze Enhanced Audio Recognition</h2>
+<p>The prototype consists of 3 parts:</p>
+<ol>
+  <li>An eye-tracker</li>
+  <li>A microphone (and voice recognition software)</li>
+  <li>The IDE (we used <a href="https://www.jetbrains.com/idea/">Jetbrains IntelliJ</a>, courtesy the student license through AU)</li>
+</ol>
 
-<p>I choose not to make the AI “guess” when there are no more fields so safely mark or expose (it happens in minesweeper), as I do not want to take away the <em>thrill of failing</em> away from the user.</p>
+<p>We used a <a href="http://tobiigaming.com/product/tobii-eyex/">Tobii EyeX</a> to track the users gaze on the screen. This allowed the user to switch between editor tabs without using the mouse, and direct his voice command to the appropriate editor pane. We used the C# SDK for Windows, which allowed us to get a continous stream of input from the tracking bar.</p>
 
-<h4 id="take-it-for-a-spin">Take it for a spin</h4>
-<p>You can <a href="http://hauthorn.me/ng-minesweep/">try the minesweeper game</a> here on this site. It’s published using github pages, which is easy to do using the angular cli (just run <code class="highlighter-rouge">ng github-pages:deploy</code>, and you are golden).</p>
+<p>We decided to integrate with <a href="http://www.nuance.com/dragon/index.htm">Dragon NaturallySpeaking</a> through DragonFly. This allowed us to create a python script that can react to certain sentences and commands, and emulate keyboard and mouse input to the IDE. The python script communicated with the C# programme over TCP to know where the user is currently looking.</p>
+
+<p>You can watch a presentation of the project on Youtube below (remember to watch in fullscreen 1080p).</p>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/8wgXM70eQag" frameborder="0" allowfullscreen=""></iframe>
 
               </div>
 
@@ -72,23 +79,16 @@
           <div class="mdl-cell mdl-cell--2-col mdl-cell--hide-tablet mdl-cell--hide-phone"></div>
           <nav class="post-nav mdl-color-text--grey-50 mdl-cell mdl-cell--8-col">
             
-              <a href="/2016/07/16/my-work-at-emplate" class="nav-button">
+              <a href="/2016/12/29/minesweeper-holidays" class="nav-button">
                 <button data-upgraded=",MaterialButton,MaterialRipple" class="mdl-button mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
                   <i class="material-icons">arrow_back</i>
                 </button>
-                My work at Emplate
+                Minesweeper holidays
               </a>
             
 
             <div class="section-spacer"></div>
 
-            
-            <a href="/2017/02/04/bachelor-gear" class="nav-button">
-              Bachelor project: GEAR
-              <button class="mdl-button mdl-button--icon mdl-color--white mdl-color-text--grey-900" role="presentation">
-                <i class="material-icons">arrow_forward</i>
-             </button>
-            </a>
             
           </nav>
         </div>
