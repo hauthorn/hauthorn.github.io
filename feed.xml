@@ -6,9 +6,41 @@
 </description>
     <link>http://hauthorn.me/</link>
     <atom:link href="http://hauthorn.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Sat, 04 Feb 2017 16:24:58 +0100</pubDate>
-    <lastBuildDate>Sat, 04 Feb 2017 16:24:58 +0100</lastBuildDate>
+    <pubDate>Wed, 12 Apr 2017 17:56:32 +0200</pubDate>
+    <lastBuildDate>Wed, 12 Apr 2017 17:56:32 +0200</lastBuildDate>
     <generator>Jekyll v3.4.0</generator>
+    
+      <item>
+        <title>Algorithm Engineering at AU</title>
+        <description>&lt;p&gt;I’ve finished a course at Aarhus University called &lt;em&gt;Algorithm Engineering&lt;/em&gt; taught by &lt;a href=&quot;http://cs.au.dk/~gerth/&quot;&gt;Gerth Brodal&lt;/a&gt;.
+The &lt;a href=&quot;http://kursuskatalog.au.dk/da/course/65711&quot;&gt;course description&lt;/a&gt; reads:&lt;/p&gt;
+
+&lt;p&gt;&lt;em&gt;The participants must at the end of the course be able to:&lt;/em&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;em&gt;&lt;strong&gt;Construct&lt;/strong&gt; and &lt;strong&gt;analyze&lt;/strong&gt; performance experiments for algorithm implementations.&lt;/em&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;em&gt;&lt;strong&gt;Construct&lt;/strong&gt; and &lt;strong&gt;implement&lt;/strong&gt; algorithms optimized towards efficient usage of the underlying computer architecture.&lt;/em&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;a href=&quot;https://github.com/hauthorn/ae-project&quot;&gt;We implemented&lt;/a&gt; algorithms for 3 seperate projects. The projects are written in C++, and we use CMAKE to manage the build process. We used &lt;a href=&quot;http://icl.utk.edu/papi/&quot;&gt;PAPI&lt;/a&gt; to collect data from the hardware (level 1 and 2 cache misses, branch mispredictions etc.), and finally plottet the results using Gnuplot.&lt;/p&gt;
+
+&lt;p&gt;Some of the interesting findings include how big an impact memory layout has on the running time of your (theoretically) fast algorithm. When implementing binary search, something as simple as changing the ordering of the searched array yields large performance gains.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ae-project/it21_comparison_runtime.png&quot; alt=&quot;Comparison binary search&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;img-text&quot;&gt;Plotting the different algorithms against each other immediately shows how engineering an algorithm toward efficient hardware usage has a big impact on performance.&lt;/p&gt;
+
+&lt;p&gt;Another finding was that sometimes doing more results in faster algorithms. Another project involved matrix multiplication. One major improvement was transposing the matrix to multiply with. This allows for sequential memory access in both matrices, which is a lot faster than accessing indices that are far apart (because they are different rows in the matrix). This means that doing more work (most CPU instructions) is a lot faster than having to wait for the memory. Even for matrices of size &lt;script type=&quot;math/tex&quot;&gt;100 x 100&lt;/script&gt;, the extra &lt;script type=&quot;math/tex&quot;&gt;\mathcal{O}(n^2)&lt;/script&gt; required to transpose the matrix is worth the investment. If the same matrix is to be using in multiple calculations, the overhead will be even less significant. This is especially true since (naive) matrix multiplication require &lt;script type=&quot;math/tex&quot;&gt;\mathcal{O}(n^3)&lt;/script&gt; multiplications.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/images/ae-project/allRun1_comparison_runtime.png&quot; alt=&quot;Comparison matrix multiplication&quot; /&gt;&lt;/p&gt;
+&lt;p class=&quot;img-text&quot;&gt;Different tricks to achive faster matrix multiplication. Note that transposing matrices before multiplying is significantly faster.&lt;/p&gt;
+</description>
+        <pubDate>Wed, 12 Apr 2017 17:00:00 +0200</pubDate>
+        <link>http://hauthorn.me/2017/04/12/algorithm-engineering</link>
+        <guid isPermaLink="true">http://hauthorn.me/2017/04/12/algorithm-engineering</guid>
+        
+        
+        <category>uni</category>
+        
+      </item>
     
       <item>
         <title>Bachelor project: GEAR</title>
