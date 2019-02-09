@@ -6,9 +6,105 @@
 </description>
     <link>http://hauthorn.me/</link>
     <atom:link href="http://hauthorn.me/feed.xml" rel="self" type="application/rss+xml"/>
-    <pubDate>Wed, 12 Apr 2017 17:56:32 +0200</pubDate>
-    <lastBuildDate>Wed, 12 Apr 2017 17:56:32 +0200</lastBuildDate>
-    <generator>Jekyll v3.4.0</generator>
+    <pubDate>Sat, 09 Feb 2019 12:41:39 +0100</pubDate>
+    <lastBuildDate>Sat, 09 Feb 2019 12:41:39 +0100</lastBuildDate>
+    <generator>Jekyll v3.8.5</generator>
+    
+      <item>
+        <title>Using beacons to out-compete googles indoor navigation</title>
+        <description>&lt;p&gt;In Emplate, we try to improve the shopping experience for the visitors. We’ve done alot to improve the utility of the app while at home, but recent had more consumers that ask for wayfinding capabilities in the app.&lt;/p&gt;
+
+&lt;p&gt;Using the “Own time” (4 hours every sprint that is free to be used on any project the employee deems interesting/worthy) provided to all employees at Emplate, I wanted to test the following hypothesis:&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;&lt;strong&gt;Can I visualize my current location&lt;/strong&gt; in a intuitive way? (wilst also conveying some of the inaccuracy that the solution has)&lt;/li&gt;
+  &lt;li&gt;&lt;strong&gt;Is the tracking accurate enough&lt;/strong&gt; that it might be used instead of existing solutions? (eg. Google Maps)&lt;/li&gt;
+  &lt;li&gt;Given our current knowledge of the layout at Storcenter Nord, &lt;strong&gt;can we provide turn-by-turn navigation?&lt;/strong&gt;&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;h2 id=&quot;where-are-our-beacons-placed&quot;&gt;Where are our beacons placed?&lt;/h2&gt;
+&lt;div style=&quot;float: right; margin: 1em;&quot;&gt;
+&lt;img src=&quot;/assets/images/emplate-wayfind/2019-01-17-beacons-located.jpg&quot; alt=&quot;Beacons in Storcenter Nord&quot; style=&quot;max-width: 320px; height auto;&quot; /&gt;
+&lt;p class=&quot;img-text&quot;&gt;Using the prototype our dev Mieszko built during his internship, &lt;br /&gt;I located beacons in the mall.&lt;/p&gt;
+&lt;/div&gt;
+&lt;p&gt;We have bluetooth beacons placed at the entrances to the stores in the mall.
+Using an app that one of our student programmers built during his internship here, I located the beacons on the map, and sent the exact locations to our system for use in the future.&lt;/p&gt;
+
+&lt;p&gt;The app is shown in the image to the right.&lt;/p&gt;
+
+&lt;p&gt;Once all beacons were located, I was ready to build my small prototype that would show my location based on the signal from the beacons to my phone.&lt;/p&gt;
+
+&lt;p&gt;By the way - locating and using the app to send the coordinates in SCN took about an hour. Now we just need to keep it up to date 😂&lt;/p&gt;
+
+&lt;div style=&quot;clear: both;&quot;&gt;&lt;/div&gt;
+
+&lt;h2 id=&quot;emplate-wayfind&quot;&gt;Emplate Wayfind&lt;/h2&gt;
+&lt;p&gt;I setup a simple app with Google Maps integrated in order to show the map of the mall (and of course to compete with Google for best location service).&lt;/p&gt;
+
+&lt;p&gt;Listening for the beacons is easily done using the SDK that our supplier &lt;a href=&quot;https://developer.kontakt.io/mobile/android/sdk/&quot;&gt;Kontakt.io&lt;/a&gt; provides us.&lt;/p&gt;
+
+&lt;p&gt;Then there’s the hypothesis: &lt;em&gt;Can I visualize my current location in a intuitive way?&lt;/em&gt;&lt;/p&gt;
+
+&lt;p&gt;To get a sense of the data we ready from the sensors, I started displaying every beacon in sight, using opacity to show signal strength (used as a proxy to distance to the beacon).
+This gives a sense of how many sensors the phone picks up at any given point in time, but leaves alot to the user to process. It’s probably better to go with a circle showing the approximate location of the user.&lt;/p&gt;
+
+&lt;p&gt;Another observation from testing: we rarely have good signal from more than 3 beacons at a time.&lt;/p&gt;
+
+&lt;p&gt;This informed the design:&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Show a circle that encloses the 1-3 nearest beacons at any time.&lt;/li&gt;
+  &lt;li&gt;If only one beacon is in range:
+    &lt;ul&gt;
+      &lt;li&gt;Chose center of the circle to be the location of the beacon&lt;/li&gt;
+      &lt;li&gt;Radius of circle is &lt;script type=&quot;math/tex&quot;&gt;min(dist_b, 10)&lt;/script&gt;, where &lt;script type=&quot;math/tex&quot;&gt;dist_b&lt;/script&gt; is the distance to the beacon in meters&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+  &lt;li&gt;If there’s multiple beacons &lt;script type=&quot;math/tex&quot;&gt;B = \{b_1, b_2, \dots, b_k \}&lt;/script&gt; in range:
+    &lt;ul&gt;
+      &lt;li&gt;Calculate simple centroid lat/lng: &lt;script type=&quot;math/tex&quot;&gt;lat = \frac{\sum_{b \in B} b_{lat}}{k}&lt;/script&gt;, &lt;script type=&quot;math/tex&quot;&gt;lng = \frac{\sum_{b \in B} b_{lng}}{k}&lt;/script&gt;&lt;/li&gt;
+      &lt;li&gt;Let radius &lt;script type=&quot;math/tex&quot;&gt;r_{max}&lt;/script&gt; equal to the distance of the farthest beacon&lt;/li&gt;
+      &lt;li&gt;Draw circle with center in the centroid &lt;script type=&quot;math/tex&quot;&gt;c&lt;/script&gt; and radius &lt;script type=&quot;math/tex&quot;&gt;r_{max}&lt;/script&gt;&lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;Images of the two visualizations:&lt;/p&gt;
+
+&lt;div class=&quot;mdl-grid&quot;&gt;
+	&lt;div class=&quot;mdl-cell mdl-cell--6-col&quot;&gt;
+		&lt;img src=&quot;/assets/images/emplate-wayfind/pins-with-opacity.png&quot; alt=&quot;Pins of nearby beacons&quot; /&gt;
+		&lt;p class=&quot;img-text&quot;&gt;Pins of beacons that the phone picks up&lt;/p&gt;
+	&lt;/div&gt;
+    &lt;div class=&quot;mdl-cell mdl-cell--6-col&quot;&gt;
+		&lt;img src=&quot;/assets/images/emplate-wayfind/circle-with-nearest.png&quot; alt=&quot;Circle based on nearest beacons&quot; /&gt;
+		&lt;p class=&quot;img-text&quot;&gt;Using the nearest beacon to draw a circle around your location&lt;/p&gt;
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;p&gt;With this out of the way - here’s a screen recording of me walking along the outermost corridors of Storcenter Nord.&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;The blue circle is Google Maps using all the sensors of the phone to locate me.&lt;/li&gt;
+  &lt;li&gt;The orange is my prototype, only using bluetooth.&lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;iframe width=&quot;800&quot; height=&quot;480&quot; src=&quot;https://www.youtube-nocookie.com/embed/98t9eyD2JPE?rel=0&quot; frameborder=&quot;0&quot; allow=&quot;accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture&quot; allowfullscreen=&quot;&quot;&gt;&lt;/iframe&gt;
+
+&lt;p&gt;If you look closely in the video, my prototype had issues in some locations of the mall with a low density of beacons (left corridor), but Google had multiple instances of showing me ghost-walking through walls, and guessing I’m in a different corridor at times.&lt;/p&gt;
+
+&lt;p&gt;I’m feeling confident that the setup can be tweaked to yield better performance just using bluetooth, and obviously get even more accurate location if we use more sensors.&lt;/p&gt;
+</description>
+        <pubDate>Sat, 09 Feb 2019 11:35:00 +0100</pubDate>
+        <link>http://hauthorn.me/2019/02/09/beacon-wayfind</link>
+        <guid isPermaLink="true">http://hauthorn.me/2019/02/09/beacon-wayfind</guid>
+        
+        
+        <category>emplate</category>
+        
+        <category>work</category>
+        
+      </item>
     
       <item>
         <title>Algorithm Engineering at AU</title>
