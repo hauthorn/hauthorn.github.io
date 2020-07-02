@@ -1,0 +1,56 @@
+---
+layout: homepage
+---
+<!-- Welcome card -->
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <header class="section__play-btn mdl-cell mdl-cell--3-col-desktop mdl-cell--2-col-tablet mdl-cell--4-col-phone mdl-color--grey-200 mdl-color-text--white">
+    <img class="my-image" src="/assets/images/christoffer-square.jpg" alt="Christoffer Hauthorn Boisen">
+  </header>
+  <div class="mdl-card mdl-cell mdl-cell--9-col-desktop mdl-cell--6-col-tablet mdl-cell--4-col-phone">
+    <div class="mdl-card__supporting-text">
+      <h4>Hello!</h4>
+        My name is Christoffer Hauthorn Boisen, and I'm one of the technical co-founders of Emplate ApS and a Computer Science student at Aarhus University.
+        <br>
+        &nbsp;
+        <br>
+        This site serves as a personal portfolio and a blog that I sporadically update with the stuff that goes on in my work-life.
+    </div>
+    <div class="mdl-card__actions">
+      {% for my_page in site.pages %}
+      {% if my_page.on_homepage %}
+      <a href="{{ my_page.url | prepend: site.baseurl }}" class="mdl-button mdl-color-text--accent mdl-js-button mdl-js-ripple-effect">{{ my_page.title }}</a>
+      {% endif %}
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+<!-- Recent blog posts -->
+<section class="section--center mdl-grid mdl-grid--no-spacing mdl-shadow--2dp">
+  <div class="mdl-card mdl-cell mdl-cell--12-col">
+    <div class="mdl-card__supporting-text mdl-grid mdl-grid--no-spacing">
+      <h4 class="mdl-cell mdl-cell--12-col">Recent Posts</h4>
+      {% for post in site.posts %}
+      <!-- Show 5 posts -->
+      {% if forloop.index0 == 5 %} {% break %}  {% endif %}
+      <div class="section__circle-container mdl-cell mdl-cell--2-col mdl-cell--1-col-phone">
+        {% if post.image %}
+        <a href="{{ post.url | prepend: site.baseurl }}"><img src="{{ post.image }}" alt="Post thumbmnail"></a>
+        {% else %}
+        <div class="section__circle-container__circle mdl-color--primary">
+        </div>
+        {% endif %}
+      </div>
+      <div class="section__text mdl-cell mdl-cell--10-col-desktop mdl-cell--6-col-tablet mdl-cell--3-col-phone">
+        <h5><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h5>
+        {{ post.excerpt }} <a href="{{ post.url | prepend: site.baseurl }}">Read more</a>
+      </div>
+      {% endfor %}
+    </div>
+    <!-- TODO: Add category links here
+    <div class="mdl-card__actions">
+      <a href="#" class="mdl-button">Read our features</a>
+    </div>
+    -->
+  </div>
+</section>

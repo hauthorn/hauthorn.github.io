@@ -1,0 +1,40 @@
+---
+layout: post
+title:  "Jekyll new site"
+date:   2016-07-15 12:00:00 +0200
+categories: update site
+excerpt: The new Portfolio site is online. The site is built using Jekyll and material design lite. The material design lite library makes it a breeze to get the material design look and feel.
+image: /assets/images/material-design-lite-logo.png
+---
+
+I've built a new site during my vacation using Jekyll and Material Design Lite. The primary reason was to allow for easier incremental updates and blog posts about (interesting) work that I do. I wanted to change my approach from complete overhauls every 6 months, and hopefully make it easier for myself to update more frequently.
+
+#### Jekyll
+It's been a breeze to use [Jekyll][jekyll] to build the site. Jekyll is basically a tool to build your website with all the features of using a CMS, but without ever having to fiddle with a database.
+It compiles assets, static files and content files to a complete static site, which you can deploy anywhere.
+
+#### Material Design Lite
+I wanted the site to use the material design language from Google, but didn't want to bother with implementing the components myself. [Material Design Lite][jekyll] to the rescue!
+
+<div class="mdl-grid">
+	<div class="mdl-cell mdl-cell--4-col"> </div>
+<div class="mdl-cell mdl-cell--4-col">
+	<img src="/assets/images/material-design-lite-logo.png" alt="Material Design Lite logo">
+	<p class="image-text">The Material Design Lite logo. <br>
+	© Google, 2015</p>
+</div>
+<div class="mdl-cell mdl-cell--4-col"> </div>
+</div>
+
+From their website:
+
+> Material Design Lite lets you add a Material Design look and feel to your websites.
+> It doesn’t rely on any JavaScript frameworks and aims to optimize for cross-device use, gracefully degrade in older browsers, and offer an experience that is immediately accessible.
+
+This was a good match for my intentions, as I had no intention on using jQuery or fancy interaction for the site. Also, they had color theming built into the framework, which makes it easy to customize colors to my liking.
+
+Now I'm off to the lake here in Monvalle, Italy. See you soon!
+
+[jekyll]: http://jekyllrb.com/
+[mdl]: https://getmdl.io/index.html
+[mdl-logo]: /assets/images/material-design-lite-logo.png
