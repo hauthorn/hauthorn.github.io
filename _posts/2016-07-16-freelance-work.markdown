@@ -3,7 +3,7 @@ layout: post
 title:  "Freelance work"
 date:   2016-07-16 12:00:00 +0200
 categories: freelance work
-excerpt: I've been build business and e-commerce websites for graphical agencies and my own client for 5 years professionally. Here is some of the work, that I'm allowed to disclose.
+excerpt: I've been building business and e-commerce websites for graphical agencies and my own client for 5 years professionally. Here is some of the work, that I'm allowed to disclose.
 image: /assets/images/businessparkstruer.jpg
 ---
 
